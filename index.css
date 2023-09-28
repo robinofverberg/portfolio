@@ -1,95 +1,169 @@
-body {
-    padding: 0;
-    margin: 0;
-    background: #070708;
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
-.navbar {
-    background:black;
+
+
+h1 {
+    font-family: 'Prompt', sans-serif;
 }
-.nav-link,
-.navbar-brand {
-    color: #fff;
-    cursor: pointer;
-}
-.nav-link {
-    margin-right: 1em !important;
-}
-.nav-link:hover {
-    color: #000;
-}
-.navbar-collapse {
-    justify-content: flex-end;
-}
-.header {
-    background-image: url('images/rainywindow.jpg');
-    background-size: cover;                                                                                                                                                                                                                                 
-    background-position: center;
-    position: relative;
-}
-.overlay {
-    position: absolute;
-    min-height: 100%;
-    min-width: 100%;
-    left: 0;
+
+#navbar {
+    background-color: rgba(0, 0, 0, 0.142);
+    position: fixed;
     top: 0;
-    background: rgba(0, 0, 0, 0.6);
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: top 0.3s;
+    float: right;
+    width: 100vw;
 }
-.description {
-	left: 50%;
-	position: absolute;
-	top: 45%;
-	transform: translate(-50%, -55%);
-	text-align: center;
+
+.nav-link {
+    color: rgb(224, 211, 175) !important;
+    font-family: 'Prompt', sans-serif;
+    margin: 0 10px;
+    font-weight: bolder !important;
 }
-.description h1 {
-	color: white;
+
+#homePage {
+    background-image: url('images/websitebackground90smiami.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
 }
-.description p {
-	color: #fff;
-	font-size: 1.3rem;
-	line-height: 1.5;
+
+#introText {
+    color: rgb(224, 211, 175);
+    font-weight: 600;
+    font-size: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat Alternates', sans-serif;
 }
-.description button {
-    border:1px solid white;
-    background:black;
-    border-radius: 0;
-    color:#fff;
+
+#introTextAlternative {
+    color: rgb(224, 211, 175);
+    font-weight: 600;
+    font-size: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat Alternates', sans-serif;
+    display: none;
 }
-.description button:hover {
-	border:1px solid #fff;
-    background:#fff;
-    color:#000;
+
+@media screen and (max-width: 992px) {
+    #introText {
+        transform: rotate(-90deg);
+        font-size: 5rem;
+        left: -100px;
+        top: 300px;
+    }
+
+    #introTextAlternative {
+        transform: rotate(-270deg);
+        font-size: 5rem;
+        right: 10px;
+        display: block;
+        top: 300px;
+    }
+
+    #navbar {
+        background-color: rgba(0, 0, 0, 0.754);
+    }
+
 }
-.features {
-	margin: 4em auto;
-	padding: 1em;
-	position: relative;
+
+
+
+#projects {
+    width: 100vw;
+    background-color: rgb(224, 218, 210);
 }
-.feature-title {
-	color: #333;
-	font-size: 1.3rem;
-	font-weight: 700;
-	margin-bottom: 20px;
-	text-transform: uppercase;
+
+#innerBorder {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    border-style: solid;
+    border-radius: 5px;
+    margin-left: 5vh;
+    margin-right: 5vh;
 }
-.features img {
-	-webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-	-moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-	margin-bottom: 16px;
+
+#projectInfo {
+    font-size: 0.8rem;
 }
-.p{
-    text-align: center !important;
+
+#experience {
+    min-height: 100vh;
+    background-color: rgb(224, 218, 210);
+    scroll-margin: 5vh;
 }
-#IceSelfie{
-    width: 90%;
-    height: auto;
+
+#workExperience {
+    margin-top: 50px;
 }
-@media screen and (min-width: 1366px) {
-    #IceSelfie{
-        width: 30%;
-        height: auto;}
+
+#aboutMe {
+    height: 100vh;
+    background-color: #888888;
 }
-.h2{
-    text-align: center !important;
+
+.navButtonRight {
+    justify-content: center !important;
+}
+
+@media screen and (max-width: 992px) {
+    .navButtonRight {
+        justify-content: end !important;
+    }
+}
+
+footer {
+    padding-top: 20px;
+    background: rgb(255, 255, 255);
+}
+
+.imageStyle {
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 991px) {
+    .justify-content-center {
+        justify-content: end !important;
+    }
+}
+
+.navbar-toggler {
+    color: white !important;
+    background-color: rgba(211, 211, 211, 0.688) !important;
+}
+
+.card-title {
+    font-size: 1.2rem !important;
+}
+
+.card {
+    box-shadow: 0px 3px 8px #888888;
+}
+
+.card-body {
+    background-color: rgb(173, 168, 162);
+    color: black !important;
+}
+
+.card-title {
+    text-decoration: underline;
+}
+
+#activeMenu {
+    cursor: pointer;
 }

@@ -1,89 +1,178 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="bootstrap.min.css"> <link rel="stylesheet" type="text/css" href="index.css">
-  <script src="index.js"></script>
-  <title>Robin Öfverberg - Web Developer</title>
+<!doctype html>
+<html lang="en" <head>
+<title>Robin Öfverberg</title>
+<!-- Meta tags and links to CSS and JS -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="script.js"></script>
+<link rel="stylesheet" href="index.css">
+
+<!-- Favicon -->
+<link rel="icon" href="images/iceSelfie.png">
+
+<!-- Bootstrap CSS v5.2.1 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,200&display=swap');
+</style>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,100&display=swap');
+</style>
 </head>
-<body>
+
+<body onload="dailySales(new Date()), mailLineBreak()">
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid navButtonRight">
+            <button class="navbar-toggler justify-content-end" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation" onclick="navBarToggled()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0 fs-2" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutMe">About me</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main header in the picture -->
+    <div id="homePage">
+        <div class="d-flex justify-content-center align-items-center">
+            <span id="introText">Öfverberg</span>
+            <span id="introTextAlternative">Öfverberg</span>
+        </div>
+    </div>
+
+
+    <div id="projects" class="py-4">
+        <div id="innerBorder" class="text-center">
+            <h1>Recent Projects</h1>
+            <div class="container pt-0 text-center">
+                <div class="row">
+                    <div class="col-xl-6         col-md-6 my-5">
+                        <div class="container d-flex justify-content-center">
+                            <div class="card">
+                                <a href="https://ntig-uppsala.github.io/frisorsaxe/">
+                                    <img src="images/frisorsaxe.jpeg" class="card-img-top" alt="Anna">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Frisör Saxé</h5>
+                                        <p class="card-text mb-2">Frontend programming and web-design project.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6 my-5">
+                        <div class="container d-flex justify-content-center">
+                            <div class="card">
+                                <img src="images/rafiki.jpeg" class="card-img-top" alt="Fredrik">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pizzeria Rafiki</h5>
+                                    <p class="card-text mb-2">Frontend programming and web-design project.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span id="projectInfo">Please keep in mind that my big school projects (such as the mySQL database website)
+                were lost after graduation. <br> This is my fault, and I have learned the importance of private backups.
+            </span>
+        </div>
+    </div>
+    <!-- Opening hours and appointment info  -->
+    <div class="text-center py-5" id="experience">
+        <h1>Life Experience</h1>
+        <div id="textContainer" style="width: 60vw; margin:0 auto;">
+            <span id="workExperience">In the summer of 2023, I worked as a Central-medarbetare at Uppsala Vatten. My
+                responsibilities included
+                providing excellent customer service, conducting regular container inventory checks, maintaining
+                cleanliness
+                at the workplace, and handling the opening and closing procedures. I also assisted in guiding customers
+                when
+                needed. During this role, I honed my customer service skills and learned the importance of efficient
+                inventory management and workplace organization.
+
+                <br><br>Prior to that, I worked at Bildemo as a Däckmontör and Lagermedarbetare during the seasonal
+                periods
+                of
+                October to December 2022 and March to May 2023. In this position, I focused on delivering exceptional
+                customer service, particularly in assisting with wheel assembly in the service bay. I was responsible
+                for
+                ongoing inventory checks to accommodate bookings and walk-in customers, as well as transferring tires to
+                the
+                tire storage area. I also operated a pallet jack for tire transport, sorted tires at the tire storage
+                using
+                a tire lift, and managed tire washing and handling. This experience provided me with valuable hands-on
+                skills in the automotive field.
+
+                <br><br>From November 2021 to April 2022, I worked as a Restaurangbiträde at Sibylla. My role involved
+                providing
+                excellent customer service, operating the cash register system, managing sales, conducting regular
+                inventory
+                checks, and preparing the restaurant for the next day's operations. This position allowed me to further
+                develop my customer service and organizational skills in a fast-paced environment.
+
+                <br><br>Additionally, in February 2019, I gained experience as a Butiksmedarbetare at Coop Nära during a
+                work
+                experience program (PRAO). My responsibilities included ensuring the store was well-maintained by
+                restocking
+                and organizing products, as well as providing excellent customer service.
+
+                <br><br>In September and October 2017, I worked as a Butiksmedarbetare at Lelles MC, where I focused on
+                packing
+                e-commerce orders, restocking products, maintaining store cleanliness, and providing customer service.
+                These
+                early experiences helped me build a strong foundation in retail operations and customer service.</span>
+        </div>
+    </div>
+
+    <div id="aboutMe" class="text-center">
+
+
+
+    </div>
+
+    <footer class="bg-dark text-white-50 text-center py-4">
+        Website made by Robin Öfverberg 2023 <br> <br>
+        <a href="mailto:info@ntig-uppsala.github.io" class="text-white-50">robin.ofverberg@gmail.com</a>
+    </footer>
+
+
 </body>
-<nav class="navbar navbar-expand-md">
-	<a class="navbar-brand" href="#">Logo</a>
-	<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="main-navigation">
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link" href="#">Home</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="aboutme.html">About me</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Contact</a>
-			</li>
-		</ul>
-	</div>
-</nav>
-
-
-
-<header class="page-header header container-fluid">
-    <div class="overlay">
-        <div class="description">
-            <h1>Robban Öfverberg - Web Developer</h1>
-            <p>Fuckin shit up since 04'.</p>
-            <button class="btn btn-outline-secondary btn-lg">See more?</button>
-        </div>
-    </div>
-</header>
-
-
-
-<div class="container features">
-    <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-12">
-            <h3 class="feature-title">"TE4" Web Development Project Q3 2023</h3>
-            <img src="images/r8.jpg" class="img-fluid">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
-        </div>
-        
-
-        <div class="col-lg-4 col-md-4 col-sm-12">
-            <h3 class="feature-title">Personal Graphics</h3>
-            <img src="images/m4.jpg" class="img-fluid">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
-        </div>
-        
-
-        <div class="col-lg-4 col-md-4 col-sm-12">
-            <h3 class="feature-title">Graphics Editing Of Q2 2024</h3>
-            <img src="images/AMG.jpg" class="img-fluid">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
-        </div>
-    </div>
-</div>
-
-
-<div class="container features">
-    <div class="row">
-        
-        
-
-        <div class="text-center">
-            <h1>
-                Some Info About Robin
-            </h1>
-            <img src="images/IceSelfie.png" id="IceSelfie" class="rounded" alt="amg">
-
-          </div>
-        
-
-        
-    </div>
-</div>
 
 </html>
