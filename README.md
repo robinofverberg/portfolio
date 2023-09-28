@@ -2,7 +2,7 @@
 
 Repository for my portfolio
 
-[Link to live server]([https://ntig-uppsala.github.io/frisorsaxe/](https://robinofverberg.github.io/te4/))
+[Link to live server] : ([https://ntig-uppsala.github.io/frisorsaxe/](https://robinofverberg.github.io/te4/))
 
 ## Coding standard
 
