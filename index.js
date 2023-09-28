@@ -1,241 +1,35 @@
-//Displays all elemnt with class name "hasjs"
-document.addEventListener("DOMContentLoaded", function () {
-    let hasjs = document.getElementsByClassName("hasjs");
+ const scrollThreshold = 950; // Adjust this value as needed
 
-    // Loop through each element with the class "hasjs"
-    for (let i = 0; i < hasjs.length; i++) {
-        hasjs[i].style.display = "block"; //Block shows element
-    }
-});
+        // Function to handle the scroll event
+        function handleScroll() {
+            // Select all elements with the class "change-me"
+            const elementsToChange = document.querySelectorAll(".nav-link");
+            const elementsToAlsoChange = document.querySelectorAll(".navbarChanged");
 
-var navBarOpen = false;
+            // Loop through each element and apply CSS changes
+            elementsToChange.forEach((element) => {
+                // Check if the user has scrolled past the specified point
+                if (window.scrollY > scrollThreshold) {
+                    // Change CSS styles when scrolled past the point
+                    element.style.color = "black";
+                    element.style.fontWeight = "600";
+                } else {
+                    // Reset CSS styles when not scrolled past the point
+                    element.style.color = "rgb(224, 211, 175)";
+                }
+            });
 
-function navBarToggled() {
-    navBarOpen = !navBarOpen; //If called it will switch the variable, if true to false and if false to true
-}
-
-// Store the previous scroll position
-var prevScrollPosition = window.scrollY;
-
-//Hides the navbar when scrolling down, shows when scrolling up.
-window.onscroll = function () {
-    //Will not hide navbar if its active on smaller screen
-    if (navBarOpen === false) {
-        let currentScrollPosition = window.scrollY;
-        // Compare scroll positions to show or hide the navbar
-        if (currentScrollPosition === 0) {
-            document.getElementById("navbar").style.top = "0";
-        } else if (prevScrollPosition > currentScrollPosition) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-35vh";
-        }
-        // Update the previous scroll position
-        prevScrollPosition = currentScrollPosition;
-    }
-};
-
-function dailySales(date) {
-    const openHours = {
-        kiruna: {
-            weekdayOpen: 10,
-            mondayClose: 16,
-            tuesdayClose: 16,
-            wednesdayClose: 16,
-            thursdayClose: 16,
-        },
-        lulea: {
-            weekdayOpen: 10,
-            mondayClose: 17,
-            tuesdayClose: 16,
-            wednesdayClose: 15,
-            thursdayClose: 16,
-        },
-    };
-
-    //variable is dependent on the url, includes check if the url containts a word
-    const locationOpeningHours = window.location.pathname.includes("lulea")
-        ? openHours.lulea //In Luleas website
-        : window.location.pathname.includes("kiruna")
-            ? openHours.kiruna //In Kirunas website
-            : console.log("location does not have openingHours for dailysailes");
-
-    const weekday = date.getDay();
-    const hour = date.getHours();
-
-    const saleLongHair = document.getElementById("saleLongHair");
-    const longHair = document.getElementById("longHair");
-
-    const saleShorthair = document.getElementById("saleShortHair");
-    const shortHair = document.getElementById("shortHair");
-
-    const saleBeard = document.getElementById("saleBeard");
-    const beard = document.getElementById("beard");
-
-    const saleColoring = document.getElementById("saleColoring");
-    const coloring = document.getElementById("coloring");
-
-    saleColoring.style.display = "none";
-    saleBeard.style.display = "none";
-    saleLongHair.style.display = "none";
-    saleShorthair.style.display = "none";
-
-    switch (weekday) {
-        case 1: //On Monday longhair is on sale
-            if (
-                //If we are open
-                hour >= locationOpeningHours.weekdayOpen &&
-                locationOpeningHours.mondayClose > hour
-            ) {
-                saleLongHair.style.display = "block";
-                longHair.style.textDecoration = "line-through";
-            }
-            break;
-        case 2: //On Tuesday shorthair is on sale
-            if (
-                //If we are open
-                hour >= locationOpeningHours.weekdayOpen &&
-                locationOpeningHours.tuesdayClose > hour
-            ) {
-                saleShorthair.style.display = "block";
-                shortHair.style.textDecoration = "line-through";
-            }
-            break;
-        case 3: //On Wednesday beard is on sale
-            if (
-                //If we are open
-                hour >= locationOpeningHours.weekdayOpen &&
-                locationOpeningHours.tuesdayClose > hour
-            ) {
-                saleBeard.style.display = "block";
-                beard.style.textDecoration = "line-through";
-            }
-            break;
-        case 4: //On Thursday coloring is on sale
-            if (
-                //If we are open
-                hour >= locationOpeningHours.weekdayOpen &&
-                locationOpeningHours.tuesdayClose > hour
-            ) {
-                saleColoring.style.display = "block";
-                coloring.style.textDecoration = "line-through";
-                break;
-            }
-    }
-}
-
-//show the different flags for each lang
-function showFlags() {
-    document.getElementById("activeMenu").style.display = "none";
-
-    const languages = document.getElementsByClassName("inActiveMenu");
-
-    //Show the langs that the user can select
-    for (const element of languages) {
-        element.style.display = "block";
-    }
-}
-
-//Only breads the mail if the screen is smaller then 700px
-function mailLineBreak() {
-    const mail = document.getElementById("mailLink");
-    if (window.location.pathname.includes("kiruna")) {
-        if (window.innerWidth <= 700) {
-            mail.innerHTML = "info@ntig-uppsala.github.io";
-        } else {
-            mail.innerHTML = "info@ntig&#8209;uppsala.github.io";
-        }
-    } else if (window.location.pathname.includes("lulea")) {
-        if (window.innerWidth <= 700) {
-            mail.innerHTML = "lulea@ntig-uppsala.github.io";
-        } else {
-            mail.innerHTML = "lulea@ntig&#8209;uppsala.github.io";
-        }
-    }
-}
-
-function regularCustomerInfo() {
-    const regularInfo = document.getElementById("regularCustomerInfo");
-    const regularInfoOther = document.getElementById("regularCustomerInfoOther");
-
-    if (window.innerWidth <= 767) {
-        regularInfo.style.display = "block";
-        regularInfoOther.style.display = "none";
-    } else {
-        regularInfo.style.display = "none";
-        regularInfoOther.style.display = "block";
-    }
-}
-
-// Call the function when the page loads and when the window is resized
-window.addEventListener("load", regularCustomerInfo);
-window.addEventListener("resize", regularCustomerInfo);
-
-window.onresize = mailLineBreak;
-
-// List of accepted zip codes
-zipCodeListKiruna = [
-    "98132",
-    "98135",
-    "98136",
-    "98138",
-    "98137",
-    "98139",
-    "98140",
-    "98142",
-    "98143",
-    "98144",
-    "98146",
-    "98147"
-];
-zipCodeListLulea = [
-    "96193",
-    "96194",
-    "96190",
-    "96191"
-
-]
-
-//  Runs when the document is fully loaded
-document.addEventListener("DOMContentLoaded", (event) => {
-    document
-        .querySelector("#zipCodeCheck form")
-        .addEventListener("submit", (event) => {
-            event.preventDefault(); // Prevents the default action
-            document.getElementById("outputValid").style.display =
-                "none";
-            document.getElementById("outputNotValid").style.display =
-                "none";
-            document.getElementById("outputNoDrive").style.display =
-                "none";
-
-            // event.submitter.parentNode.querySelector("#number").value
-            // Is what is written in the input
-            let zipInput =
-                event.submitter.parentNode.querySelector("#zipNumber").value;
-            zipInput = zipInput.split(" ").join(""); //removes spaces from string
-
-
-            if (zipInput.match(/\D/) != null) {
-                // If there are no numbers
-                document.getElementById("outputNotValid").style.display =
-                    "block";
-            } else if (zipInput.length != 5) {
-                // If there are more or less then 5 numbers
-                document.getElementById("outputNotValid").style.display =
-                    "block";
-            } else if (zipCodeListKiruna.includes(zipInput) && window.location.pathname.includes("kiruna")) {
-                // If the zip code is valid in kiruna
-                document.getElementById("outputValid").style.display =
-                    "block";
-            } else if (zipCodeListLulea.includes(zipInput) && window.location.pathname.includes("lulea")) {
-                // If the zip code is valid in lulea
-                document.getElementById("outputValid").style.display =
-                    "block";
+            if (window.scrollY > scrollThreshold) {
+                // Change CSS styles when scrolled past the point
+                elementToAlsoChange.style.backgroundColor = "red !important";
             } else {
-                // If the zip code is invalid
-                document.getElementById("outputNoDrive").style.display =
-                    "block";
+                // Reset CSS styles when not scrolled past the point
+                elementToAlsoChange.style.backgroundColor = "rgba(0, 0, 0, 0.142)";
             }
-        });
-});
+        }
+
+        
+
+
+        // Attach the scroll event listener to the window
+        window.addEventListener("scroll", handleScroll);

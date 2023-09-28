@@ -20,11 +20,11 @@ h1 {
     width: 100vw;
 }
 
-.nav-link {
-    color: rgb(224, 211, 175) !important;
+.colorChange {
+    color: rgb(224, 211, 175);
     font-family: 'Prompt', sans-serif;
     margin: 0 10px;
-    font-weight: bolder !important;
+    font-weight: bolder;
 }
 
 #homePage {
@@ -57,6 +57,97 @@ h1 {
     display: none;
 }
 
+#projects {
+    width: 100vw;
+    background-color: rgb(224, 218, 210);
+}
+
+.innerBorder {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    border-style: solid;
+    border-radius: 5px;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+
+#projectInfo {
+    font-size: 0.8rem;
+}
+
+#experience {
+    background-color: rgb(224, 218, 210);
+}
+
+button {
+    color: black;
+    background-color: rgb(173, 168, 162);
+    border: 2px solid rgb(173, 168, 162);
+    border-radius: 5px !important;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+button:hover{
+    background-color: rgb(224, 218, 210);
+    border: 2px solid rgb(173, 168, 162);
+    border-radius: 10px !important;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.267);
+}
+
+#aboutMe {
+    background-color: rgb(173, 168, 162);
+}
+
+.navButtonRight {
+    justify-content: center !important;
+}
+
+footer {
+    padding-top: 20px;
+    background: rgb(255, 255, 255);
+}
+
+.imageStyle {
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar-toggler {
+    color: white !important;
+    background-color: rgba(211, 211, 211, 0.688) !important;
+}
+
+.card-title {
+    font-size: 1.2rem !important;
+}
+
+.card {
+    box-shadow: 0px 3px 8px #888888;
+}
+
+.card-body {
+    background-color: rgb(173, 168, 162);
+    color: black !important;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.card-title {
+    text-decoration: underline;
+}
+
+#activeMenu {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 992px) {
     #introText {
         transform: rotate(-90deg);
@@ -77,93 +168,16 @@ h1 {
         background-color: rgba(0, 0, 0, 0.754);
     }
 
-}
-
-
-
-#projects {
-    width: 100vw;
-    background-color: rgb(224, 218, 210);
-}
-
-#innerBorder {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    border-style: solid;
-    border-radius: 5px;
-    margin-left: 5vh;
-    margin-right: 5vh;
-}
-
-#projectInfo {
-    font-size: 0.8rem;
-}
-
-#experience {
-    min-height: 100vh;
-    background-color: rgb(224, 218, 210);
-    scroll-margin: 5vh;
-}
-
-#workExperience {
-    margin-top: 50px;
-}
-
-#aboutMe {
-    height: 100vh;
-    background-color: #888888;
-}
-
-.navButtonRight {
-    justify-content: center !important;
-}
-
-@media screen and (max-width: 992px) {
-    .navButtonRight {
-        justify-content: end !important;
+    .innerBorder{
+        margin-left: 2vh;
+    margin-right: 2vh;
     }
-}
-
-footer {
-    padding-top: 20px;
-    background: rgb(255, 255, 255);
-}
-
-.imageStyle {
-    height: 40vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-@media screen and (max-width: 991px) {
+    
     .justify-content-center {
         justify-content: end !important;
     }
-}
-
-.navbar-toggler {
-    color: white !important;
-    background-color: rgba(211, 211, 211, 0.688) !important;
-}
-
-.card-title {
-    font-size: 1.2rem !important;
-}
-
-.card {
-    box-shadow: 0px 3px 8px #888888;
-}
-
-.card-body {
-    background-color: rgb(173, 168, 162);
-    color: black !important;
-}
-
-.card-title {
-    text-decoration: underline;
-}
-
-#activeMenu {
-    cursor: pointer;
+    
+    .navButtonRight {
+        justify-content: end !important;
+    }
 }

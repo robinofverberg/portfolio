@@ -4,7 +4,7 @@
 <!-- Meta tags and links to CSS and JS -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<script src="script.js"></script>
+<script src="index.js"></script>
 <link rel="stylesheet" href="index.css">
 
 <!-- Favicon -->
@@ -33,7 +33,7 @@
 </style>
 </head>
 
-<body onload="dailySales(new Date()), mailLineBreak()">
+<body>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -55,13 +55,13 @@
             <div class="collapse navbar-collapse flex-grow-0 fs-2" id="navbarNav">
                 <ul class="navbar-nav ">
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link colorChange" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
+                        <a class="nav-link colorChange" href="#experience">Experience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#aboutMe">About me</a>
+                        <a class="nav-link colorChange" href="#aboutMe">About me</a>
                     </li>
 
                 </ul>
@@ -79,7 +79,7 @@
 
 
     <div id="projects" class="py-4">
-        <div id="innerBorder" class="text-center">
+        <div class="text-center innerBorder">
             <h1>Recent Projects</h1>
             <div class="container pt-0 text-center">
                 <div class="row">
@@ -87,7 +87,7 @@
                         <div class="container d-flex justify-content-center">
                             <div class="card">
                                 <a href="https://ntig-uppsala.github.io/frisorsaxe/">
-                                    <img src="images/frisorsaxe.jpeg" class="card-img-top" alt="Anna">
+                                    <img src="images/frisorsaxe.jpeg" class="card-img-top" alt="Saxe">
                                     <div class="card-body">
                                         <h5 class="card-title">Frisör Saxé</h5>
                                         <p class="card-text mb-2">Frontend programming and web-design project.</p>
@@ -99,11 +99,13 @@
                     <div class="col-xl-6 col-md-6 my-5">
                         <div class="container d-flex justify-content-center">
                             <div class="card">
-                                <img src="images/rafiki.jpeg" class="card-img-top" alt="Fredrik">
-                                <div class="card-body">
-                                    <h5 class="card-title">Pizzeria Rafiki</h5>
-                                    <p class="card-text mb-2">Frontend programming and web-design project.</p>
-                                </div>
+                                <a href="">
+                                    <img src="images/rafiki.jpeg" class="card-img-top" alt="Rafiki">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pizzeria Rafiki</h5>
+                                        <p class="card-text mb-2">Frontend programming and web-design project.</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -115,60 +117,45 @@
         </div>
     </div>
     <!-- Opening hours and appointment info  -->
-    <div class="text-center py-5" id="experience">
-        <h1>Life Experience</h1>
-        <div id="textContainer" style="width: 60vw; margin:0 auto;">
-            <span id="workExperience">In the summer of 2023, I worked as a Central-medarbetare at Uppsala Vatten. My
-                responsibilities included
-                providing excellent customer service, conducting regular container inventory checks, maintaining
-                cleanliness
-                at the workplace, and handling the opening and closing procedures. I also assisted in guiding customers
-                when
-                needed. During this role, I honed my customer service skills and learned the importance of efficient
-                inventory management and workplace organization.
+    <div class="text-center pt-5" id="experience">
+        <h1 class="pb-4">Experience</h1>
+        <div id="textContainer" style="width: 60vw; margin:0 auto; padding-bottom: 5vh">
+            <span class="pt-5">I am currently enrolled in the esteemed TE4 program at NTI Uppsala, where I am honing my skills in both frontend and backend programming. <br>This comprehensive program not only provides a solid foundation in web development but also goes above and beyond by simulating a real work environment, preparing me for the challenges and opportunities that lie ahead.
+                
+                <br><br>In my role as a recycling consultant at Uppsala Vatten from june to august, I excelled in providing exceptional customer service and learned the importance of efficient inventory management and workplace organization.
 
-                <br><br>Prior to that, I worked at Bildemo as a Däckmontör and Lagermedarbetare during the seasonal
-                periods
-                of
-                October to December 2022 and March to May 2023. In this position, I focused on delivering exceptional
-                customer service, particularly in assisting with wheel assembly in the service bay. I was responsible
-                for
-                ongoing inventory checks to accommodate bookings and walk-in customers, as well as transferring tires to
-                the
-                tire storage area. I also operated a pallet jack for tire transport, sorted tires at the tire storage
-                using
-                a tire lift, and managed tire washing and handling. This experience provided me with valuable hands-on
-                skills in the automotive field.
+                <br><br>Before that, I worked at Bildemo as a Däckmontör and Lagermedarbetare during seasonal periods in 2022 and 2023. This experience equipped me with hands-on skills in the automotive field and reinforced my commitment to outstanding customer service.
+                
+                <br><br>From November 2021 to April 2022, I was a Restaurangbiträde at Sibylla, where I further developed my customer service and organizational skills in a fast-paced environment.
+                
+                <br><br>In addition, during a work experience program (PRAO) in February 2019, I gained experience as a Butiksmedarbetare at Coop Nära, focusing on store maintenance and customer service.
+                
+                <br><br>In September and October 2017, I worked as a Butiksmedarbetare at Lelles MC, which provided me with a strong foundation in retail operations and customer service.</span>
+        </div>
+        <h1 class="pb-4">Extended PDF Resumé</h1>
+        <button class="me-5" onclick="location.href='documents/CV(swe).pdf';">Swedish</button>
+        <button class="mb-5" onclick="location.href='documents/CV(eng).pdf';">English</button>
+    </div>
 
-                <br><br>From November 2021 to April 2022, I worked as a Restaurangbiträde at Sibylla. My role involved
-                providing
-                excellent customer service, operating the cash register system, managing sales, conducting regular
-                inventory
-                checks, and preparing the restaurant for the next day's operations. This position allowed me to further
-                develop my customer service and organizational skills in a fast-paced environment.
+    <div id="aboutMe" class="text-center py-5">
+        <div class="innerBorder">
+            <h1 class="pb-4">About me</h1>
+            <div style="width: 60vw; margin:0 auto;"">
+                <span>
+                    I'm a versatile individual with a diverse set of interests and skills. From an early age, I've been captivated by the world of photography and graphic design. Since the age of 13, I've been immersing myself in the creative realms of visual storytelling and design, constantly seeking new ways to express my artistic vision.
 
-                <br><br>Additionally, in February 2019, I gained experience as a Butiksmedarbetare at Coop Nära during a
-                work
-                experience program (PRAO). My responsibilities included ensuring the store was well-maintained by
-                restocking
-                and organizing products, as well as providing excellent customer service.
+                    <br><br>In addition to my creative pursuits, I'm a dedicated and self-reliant professional. I've sharpened my problem-solving abilities and commitment to exceptional service through various work experiences, including roles as a Central-medarbetare at Uppsala Vatten and a Däckmontör and Lagermedarbetare at Bildemo.
 
-                <br><br>In September and October 2017, I worked as a Butiksmedarbetare at Lelles MC, where I focused on
-                packing
-                e-commerce orders, restocking products, maintaining store cleanliness, and providing customer service.
-                These
-                early experiences helped me build a strong foundation in retail operations and customer service.</span>
+                    <br><br>Beyond the workplace, you'll often find me at the gym, where I embrace the challenge of pushing my physical boundaries. This commitment to an active lifestyle not only keeps me in great shape but also instills discipline and determination in all facets of my life.
+
+                    <br><br>With a strong work ethic, a passion for mechanical tinkering, a creative eye for photography and graphic design, and a dedication to maintaining a healthy body and mind, I eagerly welcome new challenges and opportunities for growth. Whether I'm behind the lens, at the design desk, under the hood of a car, or at the gym, I approach each endeavor with enthusiasm, creativity, and an unwavering commitment to excellence.
+                </span>
+            </div>
         </div>
     </div>
 
-    <div id="aboutMe" class="text-center">
-
-
-
-    </div>
-
     <footer class="bg-dark text-white-50 text-center py-4">
-        Website made by Robin Öfverberg 2023 <br> <br>
+        A Robin Öfverberg Website <br> <br>
         <a href="mailto:info@ntig-uppsala.github.io" class="text-white-50">robin.ofverberg@gmail.com</a>
     </footer>
 
