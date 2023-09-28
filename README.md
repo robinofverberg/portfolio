@@ -1,6 +1,6 @@
 # Portfolio
 
-Repository for Frisör Saxé worked on 2023-2024.
+Repository for my portfolio
 
 [Link to live server]([https://ntig-uppsala.github.io/frisorsaxe/](https://robinofverberg.github.io/te4/))
 
