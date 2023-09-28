@@ -1,4 +1,4 @@
-# Frisör Saxé
+# Portfolio
 
 Repository for Frisör Saxé worked on 2023-2024.
 
