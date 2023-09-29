@@ -18,6 +18,8 @@ h1 {
     transition: top 0.3s;
     float: right;
     width: 100vw;
+    transition: 0.5s ease-in-out;
+
 }
 
 .colorChange {
@@ -25,6 +27,7 @@ h1 {
     font-family: 'Prompt', sans-serif;
     margin: 0 10px;
     font-weight: bolder;
+    transition: 0.5s ease-in-out;
 }
 
 #homePage {
@@ -92,9 +95,9 @@ button {
     margin: 4px 2px;
     cursor: pointer;
     transition: 0.2s ease-in-out;
-  }
+}
 
-button:hover{
+button:hover {
     background-color: rgb(224, 218, 210);
     border: 2px solid rgb(173, 168, 162);
     border-radius: 10px !important;
@@ -168,15 +171,15 @@ footer {
         background-color: rgba(0, 0, 0, 0.754);
     }
 
-    .innerBorder{
+    .innerBorder {
         margin-left: 2vh;
-    margin-right: 2vh;
+        margin-right: 2vh;
     }
-    
+
     .justify-content-center {
         justify-content: end !important;
     }
-    
+
     .navButtonRight {
         justify-content: end !important;
     }
