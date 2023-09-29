@@ -1,0 +1,18 @@
+$primary: rgb(173, 168, 162);
+
+
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+.navbar-toggler {
+    background-color: rgba(224, 211, 175, 0.467) !important;
+    border-width: 0px;
+    border-color: rgba(224, 211, 175, 0.767);
+}
+
+a {
+    text-decoration: unset;
+}
+
+.card {
+    border: none;
+}

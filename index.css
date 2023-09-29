@@ -72,6 +72,7 @@ h1 {
     border-radius: 5px;
     margin-left: 5vh;
     margin-right: 5vh;
+    border-color: #4b4a4a;
 }
 
 #projectInfo {
@@ -114,7 +115,7 @@ button:hover {
 
 footer {
     padding-top: 20px;
-    background: rgb(255, 255, 255);
+    background: #21201f;
 }
 
 .imageStyle {
@@ -140,7 +141,7 @@ footer {
 .card-body {
     background-color: rgb(173, 168, 162);
     color: black !important;
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 0px 0px 5px 5px;
 }
 
 .card-title {
@@ -156,7 +157,7 @@ footer {
         transform: rotate(-90deg);
         font-size: 5rem;
         left: -100px;
-        top: 300px;
+        top: 35vh;
     }
 
     #introTextAlternative {
@@ -164,7 +165,7 @@ footer {
         font-size: 5rem;
         right: 10px;
         display: block;
-        top: 300px;
+        top: 35vh;
     }
 
     #navbar {
@@ -174,13 +175,17 @@ footer {
     .innerBorder {
         margin-left: 2vh;
         margin-right: 2vh;
+        border-radius: 0;
     }
 
     .justify-content-center {
         justify-content: end !important;
     }
 
-    .navButtonRight {
-        justify-content: end !important;
+    .navbar-toggler {
+        position: relative;
+        left: 3px;
+        width: 20vw;
     }
+
 }

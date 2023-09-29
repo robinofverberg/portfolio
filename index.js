@@ -1,7 +1,7 @@
 let scrollThreshold
 
 if (window.innerWidth <= 480) { // For phone screens
-    scrollThreshold = 450;
+    scrollThreshold = 400;
     console.log("You are on a phone resolution")
 } else if (window.innerWidth <= 1920) { // For screens up to 1920x1080
     scrollThreshold = 890;
@@ -16,6 +16,7 @@ function handleScroll() {
     // Select all elements with the class "change-me"
     const elementsToChange = document.querySelectorAll(".colorChange");
     const elementToAlsoChange = document.getElementById("navbar");
+    const changeNavbar = document.getElementById("navBarTogglerID");
 
     // Loop through each element and apply CSS changes
     elementsToChange.forEach((element) => {
@@ -34,6 +35,7 @@ function handleScroll() {
     if (window.scrollY > scrollThreshold) {
         // Change CSS styles when scrolled past the point
         elementToAlsoChange.style.backgroundColor = "rgba(0, 0, 0, 0.850)";
+        changeNavbar.style.backgroundColor = "red";
     } else {
         // Reset CSS styles when not scrolled past the point
         elementToAlsoChange.style.backgroundColor = "rgba(0, 0, 0, 0.142)";
@@ -45,7 +47,7 @@ function handleScroll() {
 // DOES NOT WORK OTHERWISE SORRY FOR BAD PRACTISE //:
 window.addEventListener("scroll", handleScroll);
 
-function test() {
+function makeItWork() {
     const elementsToChange = document.querySelectorAll(".colorChange");
     elementsToChange.forEach((element) => {
         // Check if the user has scrolled past the specified point
