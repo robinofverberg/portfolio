@@ -2,7 +2,7 @@
 
 Repository for my portfolio
 
-[Link to live server](https://robinofverberg.github.io/te4/)
+[Link to live server](https://robinofverberg.github.io/portfolio/)
 
 ## Coding standard
 
