@@ -2,7 +2,7 @@
 
 Repository for my portfolio
 
-[Link to live server](https://robinofverberg.github.io/portfolio/)
+[Link to live server](robinofverberg.github.io)
 
 ## Coding standard
 
