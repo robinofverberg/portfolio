@@ -34,11 +34,11 @@ function handleScroll() {
 
     if (window.scrollY > scrollThreshold) {
         // Change CSS styles when scrolled past the point
-        elementToAlsoChange.style.backgroundColor = "rgba(0, 0, 0, 0.850)";
+        elementToAlsoChange.style.backgroundColor = "rgba(0, 0, 0, 0.650)";
         changeNavbar.style.backgroundColor = "red";
     } else {
         // Reset CSS styles when not scrolled past the point
-        elementToAlsoChange.style.backgroundColor = "rgba(0, 0, 0, 0.142)";
+        elementToAlsoChange.style.backgroundColor = "rgba(0, 0, 0, 0.000)";
     }
 }
 
