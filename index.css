@@ -75,9 +75,6 @@ h1 {
     border-color: #4b4a4a;
 }
 
-#projectInfo {
-    font-size: 0.8rem;
-}
 
 #experience {
     background-color: rgb(224, 218, 210);
@@ -139,6 +136,7 @@ footer {
 }
 
 .card-body {
+    /* Setting Background to make it standard */
     background-color: rgb(173, 168, 162);
     color: black !important;
     border-radius: 0px 0px 5px 5px;
